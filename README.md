@@ -39,10 +39,7 @@ Movie Explorer is a web application that allows users to search for movies, filt
 3. Open the ```index.html ``` file in your web browser to launch the app.
 ### Customizing the API Key
 
-To use this project, replace the API key in the
-```bash 
-script.js 
-```
+To use this project, replace the API key in the ``` script.js ```
  file with your OMDB API key:
 ```
 const apiKey = 'your-api-key'; // Replace with your OMDb API Key
