@@ -1,0 +1,334 @@
+/* General Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2f;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex: 1;
+}
+
+h1, h2, h3 {
+    color: #ffcc00;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Search Section */
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 10px;
+}
+
+
+button {
+    background-color: #ffcc00;
+    color: #33334d;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+/* Movie Card Styles */
+.movie-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie-card {
+    background-color: #33334d;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+    margin: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.movie-poster {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.movie-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffcc00;
+}
+
+.movie-card p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+.movie-card button {
+    background-color: #ffcc00;
+    color: #33334d;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.movie-card button:hover {
+    background-color: #e6b800;
+}
+
+/* Modal for Movie Detail */
+#movieModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow-y: hidden; /* Prevent scrolling of the entire page */
+}
+
+.modal-content {
+    background-color: #33334d;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    max-height: 90vh; /* Ensure modal doesn't take up more than 90% of viewport height */
+    overflow-y: auto; /* Enable scrolling if modal content overflows */
+}
+
+.close-button {
+    cursor: pointer;
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+
+.modal-content img {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.movie-detail {
+    color: white;
+}
+
+.movie-detail h2 {
+    color: #ffcc00;
+    margin-top: 0;
+}
+
+.movie-detail p {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.movie-detail a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.movie-detail a:hover {
+    text-decoration: underline;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #ffcc00;
+}
+
+/* Watchlist Sidebar */
+#watchlist {
+    position: fixed;
+    right: -100%; /* Fully hide it */
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #33334d;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1001;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5);
+}
+
+#watchlist.open {
+    right: 0; /* Show the sidebar */
+}
+
+#watchlist h2 {
+    color: #ffcc00;
+    margin-top: 0;
+}
+
+#watchlist ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#watchlist ul li {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    font-size: 16px;
+}
+
+#watchlist ul li button {
+    background-color: transparent;
+    color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+#watchlist ul li button:hover {
+    color: #ffcc33;
+}
+
+/* Watchlist Toggle Button */
+#toggleWatchlist {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    background-color: #ffcc00;
+    color: #33334d;
+    border: none;
+    padding: 15px;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
+    z-index: 1002;
+}
+
+#toggleWatchlist:hover {
+    background-color: #e6b800;
+}
+
+/* Close Button for Watchlist */
+.close-watchlist {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-watchlist:hover {
+    color: #ffcc00;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    background-color: #ffcc00;
+    color: #33334d;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #e6b800;
+}
+
+.pagination button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #33334d;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #ffcc00;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e6b800;
+}
