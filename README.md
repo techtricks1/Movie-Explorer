@@ -44,10 +44,15 @@ To use this project, replace the API key in the ```bash script.js ``` file with 
 You can get a free API key by signing up on the [OMDb API website](https://www.omdbapi.com/apikey.aspx).
 
 ##📱 Social Links
+
 Follow me on:
+
 [![GitHub](https://img.icons8.com/ios-glyphs/30/000000/github.png)](https://github.com/techtricks1)
+
 [![Instagram](https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png)](https://instagram.com/_eshwar_0531)
+
 [![Snapchat](https://img.icons8.com/ios-filled/30/000000/snapchat.png)](https://snapchat.com/add/find.eshwar)
+
 [![LinkedIn](https://img.icons8.com/ios-glyphs/30/000000/linkedin.png)](https://linkedin.com/in/gajula-eshwar)
 
 ## 📄 License
