@@ -36,11 +36,17 @@ Movie Explorer is a web application that allows users to search for movies, filt
    ```bash
    cd movie-explorer
    ```
-3. Open the ```bash index.html ``` file in your web browser to launch the app.
+3. Open the ```index.html ``` file in your web browser to launch the app.
 ### Customizing the API Key
 
-To use this project, replace the API key in the ```bash script.js ``` file with your OMDB API key:
-```js const apiKey = 'your-api-key'; // Replace with your OMDb API Key ```
+To use this project, replace the API key in the
+```bash 
+script.js 
+```
+ file with your OMDB API key:
+```
+const apiKey = 'your-api-key'; // Replace with your OMDb API Key
+ ```
 You can get a free API key by signing up on the [OMDb API website](https://www.omdbapi.com/apikey.aspx).
 
 ##📱 Social Links
